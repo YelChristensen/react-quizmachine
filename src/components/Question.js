@@ -14,10 +14,14 @@ class Question extends React.Component {
           .sort()
       : [];
     console.log(this.props.question.correct_answer);
+   
+    if(!this.props.question.question) {
+        return <div>Loading</div>
+    } 
 
     return (
       <div className="question">
-        <h4 className="question__text">{this.props.question.question}</h4>
+        <h4 className="question__text">{decode(this.props.question.question)}</h4>
         <ul className="question__answers">
           {answerArr.map(answer => (
             <li 
@@ -25,7 +29,7 @@ class Question extends React.Component {
                 onClick={(event) => {
                     this.props.handleClick(answer===this.props.question.correct_answer)
                 }}
-            >{answer}</li>
+            >{decode(answer)}</li>
           ))}
         </ul>
       </div>
