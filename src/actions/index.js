@@ -18,3 +18,11 @@ export function receiveQuestion(result){
     question: result.results[0]
   }
 }
+
+export function calculateScore(answer){
+  console.log(answer, "actions.js")
+  return{
+    type: 'INCREASE_SCORE',
+    score: answer
+  }
+}

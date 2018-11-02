@@ -1,13 +1,19 @@
-import React from 'react';
-import QuestionContainer from '../containers/QuestionContainer';
+import React from "react";
+import QuestionContainer from "../containers/QuestionContainer";
+import ScoreContainer from "../containers/ScoreContainer";
 
 class App extends React.Component {
-  render(){
+  render() {
     return (
-      <div>
-        <QuestionContainer />
-      </div>
-    )
+      <React.Fragment>
+        <header>
+          <ScoreContainer />
+        </header>
+        <main>
+          <QuestionContainer />
+        </main>
+      </React.Fragment>
+    );
   }
 }
 
