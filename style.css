@@ -54,3 +54,9 @@ li{
   justify-content: space-evenly;
   align-items: center;
 }
+
+#end-video{
+  max-height: 35vh;
+  width: auto;
+  align-self: center;
+}

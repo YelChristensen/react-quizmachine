@@ -17,6 +17,7 @@ const mapDispatchToProps = dispatch => {
             console.log(answer);
             dispatch(calculateScore(answer))
             dispatch(performFetch())
+            // dispatch(playSound(answer))
         },
         fetchQuestion: () => {
             console.log("Step 2: getting action creator")

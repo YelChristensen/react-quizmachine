@@ -9,6 +9,7 @@ function App({ score, lives }) {
       <section className='results'>
         <h2>GAME OVER</h2>
         <h3>You scored: {score}</h3>
+      <video id="end-video" src="../../static/crying.mp4" autoPlay></video>
       </section>
     )} else {
     return (

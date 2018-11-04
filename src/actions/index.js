@@ -26,3 +26,10 @@ export function calculateScore(answer){
     score: answer
   }
 }
+
+// export function playSound(answer){
+//   return{
+//     type: 'PLAY_SOUND',
+//     audio: answer
+//   }
+// }
