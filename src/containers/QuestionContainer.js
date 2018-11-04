@@ -4,9 +4,10 @@ import Question from '../components/Question';
 import {performFetch, calculateScore} from '../actions';
 
 const mapStateToProps = state => {
-    console.log("Step 6 - calling mapStateToProps in QuestionContainer");
+    console.log("Step 6 - calling mapStateToProps in QuestionContainer", state.score.lives);
     return{
-        question: state.question
+        question: state.question,
+        lives: state.score.lives
     }
 }
 

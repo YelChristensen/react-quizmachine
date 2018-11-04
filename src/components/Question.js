@@ -2,10 +2,12 @@ import React from "react";
 import { decode } from 'he';
 
 class Question extends React.Component {
+
   componentDidMount() {
     console.log("Step 1: calling fetchQuestion");
     this.props.fetchQuestion();
   }
+
 
   render() {
     const answerArr = this.props.question.correct_answer
@@ -18,6 +20,7 @@ class Question extends React.Component {
     if(!this.props.question.question) {
         return <div>Loading</div>
     } 
+    
 
     return (
       <div className="question">
@@ -27,7 +30,8 @@ class Question extends React.Component {
             <li 
                 key={answer}
                 onClick={(event) => {
-                    this.props.handleClick(answer===this.props.question.correct_answer)
+                    if (this.props.lives >0)
+                   { this.props.handleClick(answer===this.props.question.correct_answer)}
                 }}
             >{decode(answer)}</li>
           ))}

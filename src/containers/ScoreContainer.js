@@ -1,6 +1,8 @@
 import {connect} from 'react-redux';
 import Score from '../components/Score';
+import App from '../components/App';
 import {calculateScore} from '../actions';
+
 
 const mapStateToProps = state => {
     return{
@@ -15,4 +17,21 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Score)
+// export default connect(mapStateToProps,mapDispatchToProps)(Score)
+
+export const ScoreContainer = connect(mapStateToProps, mapDispatchToProps)(Score);
+export const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+// import {connect} from 'react-redux';
+// import App from '../components/App';
+
+// const mapStateToProps = state => {
+//     console.log(state.score.score, state.score.lives, "from app container")
+//     return{
+//         score: state.score.score,
+//         lives: state.score.lives
+//     }
+// }
+
+// export default connect(mapStateToProps)(App)

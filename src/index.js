@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import AppWrapper from './components/AppWrapper';
 
 import thunkMiddleware from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
@@ -13,7 +13,7 @@ const store = createStore(rootReducer, applyMiddleware(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AppWrapper />
   </Provider>,
   document.getElementById('root')
 );
