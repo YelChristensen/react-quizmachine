@@ -45,7 +45,6 @@ class Question extends React.Component {
                   ? yay.play()
                   : fart.play();
                 if (this.props.lives > 0) {
-                    setTimeout(this.props.handleClick, 4000)
                   this.props.handleClick(
                     answer === this.props.question.correct_answer
                   );

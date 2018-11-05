@@ -13,9 +13,7 @@ class AppWrapper extends React.Component {
           autoPlay
           src="../../static/minionOpening.mp4"
         />
-    
           <AppContainer />
-
       </React.Fragment>
     );
   }
