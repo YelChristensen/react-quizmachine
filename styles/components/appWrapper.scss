@@ -1,4 +1,4 @@
-@import '../base/colours';
+@import '../base/colours.scss';
 
 #opening-video{
     width: 100vw;
@@ -6,7 +6,7 @@
   }
   
   body{
-    background-color: #f5e389;
+    background-color: $yellow;
     margin: 0;
     font-family: 'Kodchasan', sans-serif;
   }

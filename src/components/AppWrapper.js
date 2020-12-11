@@ -3,17 +3,14 @@ import { AppContainer } from "../containers/ScoreContainer";
 // import "../../styles/components/appWrapper.scss";
 
 class AppWrapper extends React.Component {
-
-
   render() {
     return (
       <React.Fragment>
-        <video
-          id="opening-video"
-          autoPlay
-          src="../../static/minionOpening.mp4"
-        />
-          <AppContainer />
+        <video id="opening video" width="100%" controls>
+          <source src="../../static/minionOpening.mp4" type="video/mp4" />
+        </video>
+
+        <AppContainer />
       </React.Fragment>
     );
   }

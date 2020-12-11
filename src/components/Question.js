@@ -36,10 +36,10 @@ class Question extends React.Component {
           {decode(this.props.question.question)}
         </h4>
         <ul className="question__answers">
-          {answerArr.map(answer => (
+          {answerArr.map((answer) => (
             <li
               key={answer}
-              onClick={event => {
+              onClick={(event) => {
                 this.changeStyle(event);
                 answer === this.props.question.correct_answer
                   ? yay.play()
